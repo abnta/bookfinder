@@ -33,22 +33,38 @@ function findBook(){
 
             //creating h5 for authors
             var author = document.createElement('h6');
-            author.innerHTML = 'Authors:'+' '+ book.items[i].volumeInfo.authors.join(',');
+            author.innerHTML = '<b>Authors:</b>'+' '+ book.items[i].volumeInfo.authors.join(',');
 
             //paragraph for displaying countries
             var country = document.createElement('p');
-            country.innerHTML = 'Country:'+ ' ' + book.items[i].accessInfo.country;
+            country.innerHTML = '<b>Country:</b>'+ ' ' + book.items[i].accessInfo.country;
 
             //create element for description
             var desc = document.createElement('p');
             desc.innerHTML = book.items[i].volumeInfo.description;
+
+            //create element for page count
+            var pageCount = document.createElement('p');
+            pageCount.innerHTML ='<b>Pages:</b>'+' '+ book.items[i].volumeInfo.pageCount;
+
+            //create element for published Date
+            var publishedYear = document.createElement('p');
+            publishedYear.innerHTML ='<b>Published Date:</b>'+' '+ book.items[i].volumeInfo.publishedDate;
+
+            //create a tag for preview link of the book
+            var link = document.createElement('a');
+            link.href=book.items[i].volumeInfo.previewLink;
+            link.innerHTML = 'View more...'
 
 
             // append header to the body
             div.appendChild(header);
             div.appendChild(country);
             div.appendChild(author);
+            div.appendChild(publishedYear);
+            div.appendChild(pageCount);
             div.appendChild(desc);
+            div.appendChild(link);
             //appending image and modal body to wrapperdiv
             wrapperDiv.appendChild(image);
             wrapperDiv.appendChild(div);

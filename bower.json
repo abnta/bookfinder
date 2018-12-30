@@ -1,0 +1,14 @@
+{
+  "name": "bookfinder",
+  "description": "Making book search engine",
+  "main": "server.js",
+  "authors": [
+    "Me_Main"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "jquery": "^3.3.1"
+  }
+}
